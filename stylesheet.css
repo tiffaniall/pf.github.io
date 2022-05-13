@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+	margin:0px;
+    padding:0px;
+    font-family: 'Poppins', sans-serif;
+}
+#welcome-section{
+	background-color:#E6E6E6;
+	display:flex;
+	flex-direction:column;
+	height:100vh;
+    align-items:center;
+    justify-content:center;
+}
+
+.hidden{
+    background-color: #C7C7C7;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 50px;
+    display: none;
+}
+
+.visible{
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.visible:hover + .hidden{
+    display: block;
+}
+
+.ava{
+    border: 3px solid #7C7C7C;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#sertif{
+	background-color: #E6E6E6;
+}
+th{
+    text-align: left;
+}
+
+nav{
+	background-color:#FFFFFF;
+	height:60px;
+	width:100%;
+	position:fixed;
+	display:flex;
+	align-items:center;
+	justify-content:flex-end;
+	color:black;
+	z-index:1;
+}
+
+#navbar{
+	box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+}
+
+.left{
+	display:flex;
+    justify-content: flex-start;
+	text-align: center;
+	width: 4%;
+	background-color: none;
+	margin-left: 15px;
+}
+
+
+nav a{
+	font-size:20px;
+	padding: 25px;
+}
+nav a:hover{
+	color:#FFFFFF;
+	background-color: #B1B1B1;
+	padding: 8px 25px ;
+	border-radius: 25px;
+}
+main section{
+	margin:20px 10% 20px 10%;
+	display:grid;
+	grid-template:repeat(2,1fr)/repeat(3,1fr);
+	grid-column-gap:10px;
+	justify-items:center;
+	
+}
+.project-tile{
+	margin-bottom:80px;
+	display:flex;
+	flex-direction:column;
+    align-items:center;
+    text-align: center;
+}
+
+
+.fullscreen-bg__video{
+    width: 100%;
+    height: 300px;
+}
+
+.project-tile img{
+	width: 250px;
+	height: 150px;
+}
+main{
+	padding-top:120px;
+	display:flex;
+	flex-direction:column;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.sub {
+    display: none;
+    min-width: 200px;
+}
+.sub a {
+    color: blue;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover + .sub {
+    display: block;
+}
+
+main button {
+	text-align:center;
+	border-radius:5px;
+	border-color:#7C7C7C;
+	cursor:pointer;
+	box-shadow:none;
+	width:auto;
+	align-self:center;
+	padding:5px 10px 5px 10px;
+	margin-bottom:20px;
+}
+main a,main a:hover,main a:active,main a:focus,main a:visited{
+	text-decoration:none;
+	color:#AEB6B9;
+}
+main section div a:hover{
+	border-radius:10px;
+	box-shadow:
+		-5px 5px 20px,
+		5px -5px 20px,
+		5px 5px 20px,
+		-5px -5px 20px;
+}
+a, a:hover, a:active, a:focus, a:visited{
+	color:black;
+	text-decoration:none;
+}
+main section div a img{
+	border:solid;
+	border-color:#7C7C7C;
+	border-width:2px;
+	border-radius:10px;
+	height:120px;
+	width:auto;
+	overflow:hidden;
+}
+footer{
+	background-color:#FFFFFF;
+	height:25vh;
+	display:flex;
+	flex-direction:row;		align-items:center;
+	justify-content:space-evenly;
+	box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+}
+footer div a{
+	background-color:#FFFFFF;
+	border-radius:50%;
+	height:90px;
+	width:90px;
+	display:flex;
+	align-items:center;
+	text-align: center;
+	justify-content:center;
+	white-space:pre-line;
+	overflow:hidden;
+}
+footer div a:hover{
+	border-radius:50%;
+	box-shadow:
+		-5px 5px 10px rgba(109, 109, 109, 0.22),
+		5px -5px 10px rgba(109, 109, 109, 0.22),
+		5px 5px 10px rgba(109, 109, 109, 0.22),
+		-5px -5px 10px rgba(109, 109, 109, 0.22);
+}
+footer div a img{
+	border-radius:10%;
+}
+footer div p{
+	text-align:center;
+}
+
+h1{
+    text-align: center;
+}
+
+main h1{
+	padding-bottom: 10px;
+	border-bottom: 2px solid #C9C9C9;
+	margin-bottom: 40px;
+	margin-right: 30%;
+	margin-left:30%;
+}
+
+.conme{
+	border: 1px solid #AEB6B9;
+	border-radius: 20px;
+	padding: 1px 10px;
+	font-size: 15px;
+	display: flex;
+	margin-right: 20px;
+
+}
+
+
+li{
+	list-style: none;
+	float: left;
+	
+}
+
+/*style untuk popup */	
+#popup, #popup1, #popup2, #popup3, 
+#popup4, #popup5, #popser1, #popser2, 
+#popser3, #popser4, #popser5, #popser6 {
+	display: none;
+	opacity: 0;
+	margin-top: -200px;		
+	background-color: rgba(136, 136, 136, 0.45);	
+}	
+	
+span{
+	font-weight: bold;
+}
+
+#popup:target, #popup1:target, #popup2:target, #popup3:target,
+ #popup4:target, #popup5:target, #popser1:target, 
+ #popser2:target, #popser3:target, #popser4:target, 
+ #popser5:target, #popser6:target{
+	display: flex;
+	opacity: 1;
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:0;
+	z-index: 99999999999;
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	transition:all 1s;
+}
+
+.see{
+	color: #0F2149;
+}
+
+.popup-container {
+	position: relative;
+	margin:5% 10%;
+	padding:30px 50px;
+	background-color: #fafafa;
+	color:#333;
+	border-radius: 3px;
+	overflow: scroll;
+	height: 75%;
+}
+
+a.popup-close {
+	position: absolute;
+	top:3px;
+	right:3px;
+	background-color: #333;
+	padding:7px 10px;
+	font-size: 20px;
+	text-decoration: none;
+	line-height: 1;
+	color:#fff;
+}
+
+.slide-foto{
+	width: 400px;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	border: 2px solid #D6D6D6;
+	border-radius: 8px;
+	box-shadow: 10px 25px 30px rgba(75, 75, 75, 0.13);
+	text-align: center;
+	left: 50%;
+}
+
+.slide-foto:hover{
+	background-color: #555555;
+}
+
+.wrapper{
+	width: 100%;
+	display: flex;
+	animation: slide 25s infinite;
+}
+
+	@keyframes slide{
+		0%{
+			transform: translateX(0);
+		}
+		5%{
+			transform: translateX(0%);
+		}
+		10%{
+			transform: translateX(-100%);
+		}
+		15%{
+			transform: translateX(-100%);
+		}
+		20%{
+			transform: translateX(-200%);
+		}
+		25%{
+			transform: translateX(-200%);
+		}
+		30%{
+			transform: translateX(-300%);
+		}
+		35%{
+			transform: translateX(-300%);
+		}
+		40%{
+			transform: translateX(-400%);
+		}
+		45%{
+			transform: translateX(-400%);
+		}
+		50%{
+			transform: translateX(-500%);
+		}
+		55%{
+			transform: translateX(-500);
+		}
+		60%{
+			transform: translateX(-600%);
+		}
+		65%{
+			transform: translateX(-600%);
+		}
+		70%{
+			transform: translateX(-700%);
+		}
+		75%{
+			transform: translateX(-700%);
+		}
+		80%{
+			transform: translateX(-800%);
+		}
+		85%{
+			transform: translateX(-800%);
+		}
+		90%{
+			transform: translateX(-800%);
+		}
+		95%{
+			transform: translateX(-900%);
+		}
+		98%{
+			transform: translateX(-900%);
+		}
+		100%{
+			transform: translateX(-1000%);
+		}
+	}
+	
+img{
+	width: 100%;
+}
+
+.video{
+	width: 400px;
+}

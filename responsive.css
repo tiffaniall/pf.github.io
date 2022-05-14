@@ -1,77 +1,188 @@
 @media (max-width:800px){
-	nav{
-		background-color:#FFFFFF;
-		height:60px;
-		width:100%;
-		position:fixed;
-		display:flex;
-		align-items:center;
-		justify-content:flex-end;
-		color:black;
-		z-index:1;
-	}
-	#navbar{
-		box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
-	}
-	main section{
-		margin:20px 10% 20px 10%;
-		display:grid;
-		grid-template:repeat(6,1fr)/1fr;
-		justify-items:center;
-	}
-	footer{
-		background-color:#FFFFFF;
-		height:25vh;
-		display:flex;
-		align-items:center;
-		justify-content:space-evenly;
-		box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
-	}
-}
+	
+		nav li{
+			float: left;
+		}
+		
+		#welcome-section ul{
+			margin-left: 50%;
+			margin-top: 50px;
+			
+		}
+		
+		.parag{
+			text-align: justify;
+			margin: 10px 100px 0 50px;
+		}
 
-@media (max-width:667px){
-	nav{
-		background-color:#FFFFFF;
-		height:60px;
-		width:100%;
-		position:fixed;
-		display:flex;
-		align-items:center;
-		justify-content:flex-end;
-		color:black;
-		z-index:1;
-		font-size: 12px;
+		.visible{
+			margin-bottom: 5px;
+			text-align: left;
+			margin: 10px 80px 0 50px;
+		}
+		
+	
+		main section{
+			margin:20px 10% 20px 10%;
+			display:grid;
+			grid-template:repeat(6,1fr)/1fr;
+			justify-items:center;
+		}
+		footer{
+			background-color:#FFFFFF;
+			height:25vh;
+			display:flex;
+			align-items:center;
+			justify-content:space-evenly;
+			box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+		}
+		.popup-container {
+			width:100%;
+			height: 70%;
+		}
 	}
-	#navbar{
-		box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
-	}
-	main section{
-		margin:20px 10% 20px 10%;
-		display:grid;
-		grid-template:repeat(6,1fr)/1fr;
-		justify-items:center;
-	}
-	footer{
-		background-color:#FFFFFF;
-		height:25vh;
-		display:flex;
-		align-items:center;
-		justify-content:space-evenly;
-		box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
-	}
-}
+	
+	@media (max-width:710px){
+		
+		.menu-icon{
+			display: block;
+			float: right;
+			margin-top: 7px;
+			margin-right: 10px;
+		}
+		
+		.menu-icon:hover + .header-right{
+			display: block;
+			width: 100px;
+			position: absolute;
+			margin-top:60px;
+			margin-left: 70%;
+			background-color: rgba(255, 255, 255, 0.37);
+			padding: 0 70px 20px 0;
+		}
+		
+		.header-right{
+			display: none;
+		}
+	
+		main section{
+			margin:20px 10% 20px 10%;
+			display:grid;
+			grid-template:repeat(6,1fr)/1fr;
+			justify-items:center;
+		}
+		footer{
+			background-color:#FFFFFF;
+			height:20vh;
+			display:flex;
+			align-items:center;
+			justify-content:space-evenly;
+			box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+		}
+		.popup-container {
+			width:80%;
+			height: 60%;
+			margin-top: 15%;
+		}
+	
+		.slide-foto{
+			width: 50%;
+		}
+	
+		.popup-container p{
+			font-size: 12px;
+		}
+		
+		#welcome-section ul{
+			margin-left: 55%;
+			margin-top: 25px;
+		}
+		
+		.parag{
+			text-align: justify;
+			
+			margin: 10px 80px 0 50px;
+		}
 
-@media (min-width: 667px){
-    .popup-container {
-        width:70%;
-    }
+		.visible{
+			margin-bottom: 5px;
+			text-align: left;
+			
+			margin: 30px 80px 0 50px;
+		}
+	
+	}
+	
+	@media (max-width:1400px){
+		nav li{
+			float: left;
+		}
+	}
 
-    .slide-foto{
-        width: 70%;
-    }
-}
-@media (max-width: 767px){
-    .popup-container {
-        width:100%;
-    }
-}
+	@media (max-width:400px){
+		.popup-container {
+			width:80%;
+			height: 50%;
+			margin-top: 35%;
+		}
+	
+		.slide-foto{
+			width: 70%;
+		}
+	}
+
+	@media (max-width:660px){
+		.visible p{
+			margin: 0 100px 0 0;
+			font-size: 13px;
+		}
+
+		.parag{
+			font-size: 15px;
+			padding: 0;
+		}
+
+		.visible{
+			margin-top: 45px;
+		}
+
+		#welcome-section ul{
+			margin-left: 30%;
+			margin-top: 9px;
+		}
+		.visible img{
+			display: block;
+			margin: 10px 140px;
+		}
+	}
+
+
+	@media (max-width:550px){
+		.visible p{
+			margin: 0px 10px 10px -25px;
+			font-size : 12px;
+			
+		}
+
+		.visible h1{
+			margin: 0px 15px 0 -25px;
+		}
+		
+		.parag{
+		    margin: 2px 0 0 25px;
+		    
+			font-size : 14px;
+		}
+        .visible, .parag{
+            width:85%;
+        }
+		#welcome-section ul{
+			margin-left: 20%;
+			margin-top: 3%;
+		}
+
+		.visible img{
+			display: block;
+			margin: 10px 110px;
+		}
+	}

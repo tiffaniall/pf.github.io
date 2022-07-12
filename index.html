@@ -2,464 +2,965 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Portfolio</title>
+	<title>Tiffani Afiollalia Lorenza</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" type="text/css" href="responsive.css">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     />
+    <link rel="icon" type="image/x-icon" href="me.png">
+    <script>
+        function myFunctions() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
 </head>
-<body>
+<body onload="myFunction()" style="margin:0;">
+ 
+<!--loader-->
+    <div class="bocont">
+        <div id="loader"></div>
+    </div>
+<!--loader-->
 
-<nav id="navbar">
-    <div class="conthead">
-        <div class="header-left">
-            <img src="me.png">
-            <p>Portfolio</p>
-        </div>
-        <div class="menu-icon">
-            <span class="fa fa-bars menu-icon"></span>
-        </div>
-        <div class="header-right">
-            <ul>
-                <li><a href="#welcome-section">HOME</a></li>
-                <li><a href="#main">PROJECTS</a></li>
-                <li><a href="#sertif">SERTIFIKAT</a></li>
-                <li><a href="#footer">CONTACT</a></li>
-            </ul>
+<div style="display:none;" id="myDiv" class="animate-bottom">   
+    <div class="fixed">
+        <!-- mobile -->
+            <div class="menu-icon">
+                <!-- <button onclick="myFunctions()" class="dropbtn"><span class="fa fa-bars"></span></button> -->
+                <a href="javascript:void(0);" class="dropbtn" onclick="myFunctions()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="header-right">
+                        <a class="hideresp" href="#welcome-section">Home</a>
+                        <button class="dropdown-btn"> &nbsp;Portfolio
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                            <div class="dropdown-container lildrop">
+                                <a href="#main" class="one">&nbsp;&nbsp;PROJECTS</a>
+                                <a href="#sertif" class="two">&nbsp;&nbsp;SERTIFIKAT</a>
+                            </div>
+                        <a href="#footer" class="hideresp">Contact</a>
+                    </div>
+                </div>        
+            </div>
+        <!-- mobile end -->
+        <div class="header">
+            <img class="logo" src="me.png">
+            <div class="header-right">
+                <a class="hideresp" href="#welcome-section">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtnb" onclick="myFunctionB()">Portfolio
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-contentB" id="myDropdownB">
+                        <a href="#main">PROJECTS</a>
+                        <a href="#sertif">SERTIFIKAT</a>
+                    </div>
+                </div>
+                <a href="#footer" class="hideresp">Contact</a>
 
+            
+            </div>
         </div>
     </div>
-</nav>
 
-<header id="welcome-section">
-    <div class="visible">
-        <h1>Hallo, Saya <br>Tiffani Afiollalia Lorenza</h1>
-        <img src="tiffani1.png" alt="Tiffani Afiollalia Lorenza">
-        <p>Fresh Graduate | D3 Teknik Informatika Politeknik Negeri Semarang.</p>
+    <header id="welcome-section">
+        <div class="visible">
+            <h1>Hallo, Saya <br>Tiffani Afiollalia Lorenza</h1>
+            <img src="tiffani1.png" alt="Tiffani Afiollalia Lorenza">
+            <p>Fresh Graduate | D3 Teknik Informatika Politeknik Negeri Semarang.</p>
+        </div>
+        
+        <div>
+            <p class="parag">Memiliki pengalaman freelance dan magang sebagai desainer grafis. 
+                Saya memiliki kemampuan di beberapa software seperti Adobe Illustrator, Adobe Photoshop, Adobe Lightroom, CorelDraw, Figma, Blender3D serta bahasa pemrograman HTML&CSS.
+                Berpengalaman dalam organisasi internal kampus.
+                Memiliki sertifikasi dalam pelatihan junior desain grafis dan front end developer.
+                Menurut orang sekitar, saya adalah orang yang jujur dan memiliki rasa tanggung jawab.
+                Saya mencari peluang kerja yang memberi kesempatan untuk semakin berkembang. 
+            </p>
+        </div>
+        <ul>
+            <li><a href="#footer" class="conme">Hubungi Saya</a></li>
+            <li><a href="CV_TiffaniAL.pdf" target="_blank" class="conme">CV Saya</a></li>
+        </ul>
+    </header>
+    <div class="main" id="main">
+        <h1>Projects</h1>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Semua</button>
+            <button class="btn" onclick="filterSelection('feeds')"> Feeds Instagram</button>
+            <button class="btn" onclick="filterSelection('stori')"> Story</button>
+            <button class="btn" onclick="filterSelection('iklan')"> Iklan</button>
+            <button class="btn" onclick="filterSelection('vektor')"> Vektor</button>
+        </div>
+        <div class="row">
+            <!--Project7-->
+                <div class="column feeds">
+                    <div class="content ">
+                        <a href="#popup6" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v8.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                            <div>Feeds Instagram<br>sususemua</div>
+                    </div>
+                </div>
+
+            <!--Project8-->
+                <div class="column stori">
+                    <div class="content ">
+                        <a href="#popup7" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v9.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                            <div>Story Instagram<br>sususemua</div>
+                    </div>
+                </div>	
+
+            <!--Project6-->
+                <div class="column feeds">
+                    <div class="content ">
+                        <a href="#popup5" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v7.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                            <div>Feeds Instagram<br>hmepolines</div>
+                    </div>
+                </div>
+
+            <!--Project1-->
+                <div class="column feeds">
+                    <div class="content">
+                        <a href="#popup" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v1.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                        <div>Feeds Instagram<br>MakeOver.id</div>
+                    </div>
+                </div>
+            
+            
+            <!--Project2-->
+                <div class="column feeds">
+                    <div class="content">
+                        <a href="#popup1" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v2.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                        <div>Feeds Instagram<br>jahitpakaian.com</div>
+                    </div>
+                </div>
+            
+            <!--Project3-->
+                <div class="column feeds">
+                    <div class="content">
+                        <a href="#popup2" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v3.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                            <div>Feeds Instagram<br>Dakwah Islami</div>
+                    </div>
+                </div>
+            
+            
+            <!--Project4-->
+                <div class="column feeds">
+                    <div class="content">
+                        <a href="#popup3" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v4.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                    <div>Feeds Instagram<br>gudangkaos.id</div>
+                </div>
+                </div>
+            
+            
+            <!--Project5-->
+                <div class="column feeds">
+                    <div class="content ">
+                        <a href="#popup4" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v5.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                            <div>Feeds Instagram<br>magangjogja.com</div>
+                    </div>
+                </div>
+
+            <!--Project10-->
+                <div class="column stori">
+                    <div class="content">
+                        <a href="#popup9" class="popup-link">
+                            <video loop muted autoplay class="fullscreen-bg__video">
+                                <source src="video/v10.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                        <div>Story<br>gudangkaos.id</div>
+                    </div>
+                </div>
+
+            <!--Project9-->
+                <div class="column iklan ">
+                    <div class="content titip">
+                        <a href="#popup8" class="popup-link">
+                            <img src="halaman/adv/1.png">
+                        </a>
+                        <div>Iklan<br>titipsini.com</div>
+                    </div>
+                </div>
+            
+            <!--Project11-->
+                <div class="column vektor ">
+                    <div class="content titip">
+                        <a href="#popup10" class="popup-link">
+                            <img src="halaman/vek/1.jpg">
+                        </a>
+                        <div>Desain Vektor</div>
+                    </div>
+                </div>
+        </div>
     </div>
-    
-    <div>
-        <p class="parag">Memiliki pengalaman freelance dan magang sebagai desainer grafis. 
-            Menguasai beberapa software seperti Adobe Illustrator, Adobe Photoshop, Adobe Lightroom, CorelDraw, serta bahasa pemrograman HTML&CSS.
-            Berpengalaman dalam organisasi internal kampus.
-            Memiliki sertifikasi dalam pelatihan junior desain grafis dan front end developer.
-            Menurut orang sekitar, saya adalah orang yang jujur dan memiliki rasa tanggung jawab.
-            Saya mencari peluang kerja yang memberi kesempatan untuk semakin berkembang. 
-        </p>
-    </div>
-    <ul>
-        <li><a href="#footer" class="conme">Hubungi Saya</a></li>
-        <li><a href="https://bit.ly/CVTiffanial" target="_blank" class="conme">CV Saya</a></li>
-    </ul>
-</header>
-<main id="main">
-    <h1>Projects</h1>
-	<section id="projects">
+
+    <main id="sertif">
+        <h1>Sertifikat</h1>
+        <section >
+            <!--Sertif 1-->
+                <div class="project-tile">
+                    <a href="#popser1" class="popup-link">
+                        <img src="sertif/DG.PNG">
+                    </a>
+                    <div>Sertifikat Pelatihan<br>Junior Graphic Design</div>
+                </div>
+                <div class="popup-wrapper" id="popser1">
+                    <div class="popup-container">
+                        <h2>Sertifikat Pelatihan Junior Graphic Design</h2>                    
+                        <p>Sertifikat ini saya dapatkan setelah mengikuti pelatihan Junior Design Graphic
+                            yang diselenggarakan oleh Digital Talent Scholarship dalam program Vocational School Graduate Academy (VSGA).
+                            Saya mengikuti pelatihan selama tiga bulan pada tanggal 12 Juli - 23 Oktober 2021.
+                            Saat pelatihan saya menggunakan software <span>Adobe Illustrator, Adobe Photoshop dan CorelDraw</span>.
+                        </p>
+                        <img src="sertif/Desain.jpg">
+                        <a class="popup-close" href="#closed">X</a>
+                    </div>
+                </div>
+
+            <!--Sertif 2-->
+                <div class="project-tile" >
+                    <a href="#popser2" class="popup-link">
+                        <img src="sertif/FED.PNG">
+                    </a>
+                    <div>Sertifikat Pelatihan<br>Front End Developer</div>
+                </div>
+                <div class="popup-wrapper" id="popser2">
+                    <div class="popup-container">
+                        <h2>Sertifikat Pelatihan Front End Developer</h2>                    
+                        <p>Sertifikat ini saya dapatkan setelah mengikuti pelatihan Front End Developer
+                            yang diselenggarakan oleh Digital Talent Scholarship dalam program Fresh Graduate Academy (FGA).                        Saya mengikuti pelatihan selama satu bulan pada tanggal 7 Maret - 1 April 2022.
+                            Saat pelatihan saya menggunakan bahasa pemrograman <span>HTML, CSS, dan Javascript</span>.
+                            Di pelatihan ini saya belajar melalui situs web <span>progate.com</span>, di pelatihan ini saya 
+                            mendapatkan akun premium secara gratis. Saat pelatihan, seain belajar HTML, CSS, dan Javascript saya juga bisa membuka 
+                            pelajaran lain seperti <span>Sass dan github</span>. Berikut ini lampiran sertifikat yang saya peroleh.<br><br>
+                        </p>
+                        <img src="sertif/HTMLCSS.jpg">
+                        <img src="sertif/JS.jpg">
+                        <img src="sertif/Git.jpg">
+                        <a class="popup-close" href="#closed">X</a>
+                    </div>
+                </div>
+
+            <!--Sertif 3-->    
+                <div class="project-tile">
+                    <a href="#popser3" class="popup-link">
+                        <img src="sertif/PCC.png">
+                    </a>
+                    <div>Sertifikat Polytechnic<br>Computer Club</div>
+                </div>
+                <div class="popup-wrapper" id="popser3">
+                    <div class="popup-container">
+                        <h2>Sertifikat Polytechnic Computer Club</h2>                    
+                        <p>Sertifikat ini saya dapatkan setelah mengikuti Unit Kegiatan Mahasiswa
+                            yang berkaitan dengan program studi kuliah saya yaitu teknik informatika.
+                            Saya mengikuti kegiatan mahasiswa ini dengan tujuan untuk menambah relasi serta wawasan 
+                            mengenai dunia teknologi yang tidak saya dapatkan dari mata kuliah saya. Selain itu saya 
+                            juga mengikuti beberapa program kerja yang diselenggarakan oleh UKM PCC ini, berikut ini
+                            lampiran sertifikat yang saya peroleh setelah mengikuti beberapa kepanitiaan<br><br>
+                        </p>
+                        <img src="sertif/PCC.png">
+                        <img src="sertif/SEMNAS20.jpg">
+                        <img src="sertif/TECH20.jpg">
+                        <a class="popup-close" href="#closed">X</a>
+                    </div>
+                </div>
+
+            <!--Sertif 4-->
+                <div class="project-tile">
+                    <a href="#popser4" class="popup-link">
+                        <img src="sertif/HME1.jpg">
+                    </a>
+                    <div>Sertifikat Himpunan<br>Mahasiswa Elektro</div>
+                </div>
+                <div class="popup-wrapper" id="popser4">
+                    <div class="popup-container">
+                        <h2>Sertifikat Himpunan Mahasiswa Elektro</h2>                    
+                        <p>Sertifikat ini saya dapatkan setelah mengikuti Himpunan Mahasiswa Elektro.
+                            Saya mengikuti kegiatan mahasiswa ini dengan tujuan untuk melatih kemampuan saya dalam berorganisasi 
+                            dan juga menambah relasi serta melatih diri untuk bersosialisasi yang baik.
+                            Dalam organisasi ini juga terdapat banyak proker yang melatih saya dalam hal kepanitiaan, khususnya kerjasama tim.
+                            Saat menjalankan beberapa proker, saya pernah menjadi penanggung jawab dalam divisi logistik(desain), Sekretaris, Perlengkapan, dan Konsumsi.
+                            Berikut ini lampiran sertifikat yang saya peroleh setelah mengikuti beberapa kepanitiaan<br><br>
+                        </p>
+                        <img src="sertif/HME1.jpg">
+                        <img src="sertif/PSemNas.jpg">
+                        <img src="sertif/PEMILU.jpg">
+                        <img src="sertif/FKBSE.jpg">
+                        <img src="sertif/ECC.jpg">
+                        
+                        <a class="popup-close" href="#closed">X</a>
+                    </div>
+                </div>
+
+            <!--Sertif5-->
+                <div class="project-tile">
+                    <a href="#popser5" class="popup-link">
+                        <img src="sertif/bem.png">
+                    </a>
+                    <div>Sertifikat Lainya</div>
+                </div>
+                <div class="popup-wrapper" id="popser5">
+                    <div class="popup-container">
+                        <h2>Sertifikat Peserta Kegiatan</h2>                    
+                        <p>Sertifikat ini saya dapatkan setelah mengikuti beberapa
+                            kegiatan seperti seminar dan kegiatan lainya.<br><br>
+                        </p>
+                        <img src="sertif/bem.png">
+                        <img src="sertif/fkbsep.jpg">
+                        <img src="sertif/kwu.jpg">
+                        <img src="sertif/pesima.jpg">
+                        <img src="sertif/tech19.jpg">
+                        <img src="sertif/semnasp.jpg">
+                        <img src="sertif/warna.jpg">
+                        <img src="sertif/ldk.jpg">
+                        <img src="sertif/sert.jpg">
+                        <img src="sertif/kkl.jpg">
+                            
+                        <a class="popup-close" href="#closed">X</a>
+                    </div>
+                </div>
+
+            <!--Sertif 6-->    
+                <div class="project-tile">
+                    <a href="#popser6" class="popup-link">
+                        <img src="sertif/magang.jpg">
+                    </a>
+                    <div>Sertifikat Magang</div>
+                </div>
+                <div class="popup-wrapper" id="popser6">
+                    <div class="popup-container">
+                        <h2>Sertifikat Magang</h2>                    
+                        <p>Sertifikat ini saya dapatkan setelah mengikuti magang di SevenInc sebagai desainer grafis selama 3 bulan.
+                            Selama magang saya banyak belajar tentang digital marketing design untuk feeds instagram.
+                            Biasanya saya membuat feeds instagram minimal 30 feeds dan bisa membuat sampai 90 feeds per tema nya.
+                            Saat magang saya sudah pernah membuat 300 lebih desain feeds instagram<br><br></p>
+                        <img src="sertif/magang.jpg">
+                            
+                        <a class="popup-close" href="#closed">X</a>
+                    </div>
+                </div>
+
+        </section>
+
         <!--Project1-->
-		<div class="project-tile">
-            <a href="#popup" class="popup-link">
-                <video loop muted autoplay poster="poster.jpg" class="fullscreen-bg__video">
-                    <source src="video/v1.mp4" type="video/mp4">
-                </video>
-            </a>
-            <div>Feeds Instagram MakeOver.id</div>
-        </div>
+            <div class="popup-wrapper" id="popup">
+                <div class="popup-container">
+                    <h2>Feeds Instagram MakeOver.id</h2>                    
+                    <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
+                        Feeds Instagram yang bertujuan untuk mengiklankan sebuah jasa editing video agar menarik perhatian costumer
+                        jika ingin membuat video seperti video undangan ulang tahun, 
+                        undangan pernikahan, jasa untuk joki tugas, dan sejenisnya.
+                        Berikut ini beberapa desain yang saya buat.<br><br><br><br><br><br><br><br><br><br>
+                    </p>
+
+                    <div class="slide-foto">
+                        <div class="wrapper">
+                            <img src="mo/1.png">
+                            <img src="mo/2.png">
+                            <img src="mo/3.png">
+                            <img src="mo/4.png">
+                            <img src="mo/5.png">
+                            <img src="mo/6.png">
+                            <img src="mo/7.png">
+                            <img src="mo/8.png">
+                            <img src="mo/9.png">
+                            <img src="mo/10.png">
+                            <img src="mo/11.png">
+                            <img src="mo/12.png">
+                        </div>
+                        <a href="halaman/mo/mo.html" target="_blank">Lihat Lebih Banyak</a>
+                    </div>
+                    <a class="popup-close" href="#closed">X</a>
+                </div>
+            </div>
 
         <!--Project2-->
-		<div class="project-tile">
-		<a href="#popup1" class="popup-link">
-            <video loop muted autoplay poster="poster.jpg" class="fullscreen-bg__video">
-                <source src="video/v2.mp4" type="video/mp4">
-            </video>
-        </a>
-			<div>Feeds Instagram jahitpakaian.com</div>
-        </div>
-        
+            <div class="popup-wrapper" id="popup1">
+                <div class="popup-container">
+                    <h2>Feeds Instagram jahitpakaian.com</h2>                    
+                    <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
+                        Feeds Instagram yang bertujuan untuk mengiklankan sebuah jasa konveksi untuk PDL.
+                        Berikut ini beberapa desain yang saya buat.<br><br><br><br><br><br><br><br><br><br>
+                    </p>
+
+                    <div class="slide-foto">
+                        <div class="wrapper">
+                            <img src="pdl/1.png">
+                            <img src="pdl/2.png">
+                            <img src="pdl/3.png">
+                            <img src="pdl/4.png">
+                            <img src="pdl/5.png">
+                            <img src="pdl/6.png">
+                            <img src="pdl/7.png">
+                            <img src="pdl/8.png">
+                            <img src="pdl/9.png">
+                        </div>
+                        <a href="halaman/pdl/pdl.html" target="_blank">Lihat Lebih Banyak</a>
+
+                    </div>
+                    
+                    <a class="popup-close" href="#closed">X</a>
+                </div>
+            </div>
+
         <!--Project3-->
-		<div class="project-tile">
-		<a href="#popup2" class="popup-link">
-            <video loop muted autoplay poster="poster.jpg" class="fullscreen-bg__video">
-                <source src="video/v3.mp4" type="video/mp4">
-            </video>
-        </a>
-			<div>Feeds Instagram Dakwah Islami</div>
-        </div>
-        
-        <!--Project4-->
-		<div class="project-tile">
-		<a href="#popup3" class="popup-link">
-            <video loop muted autoplay poster="poster.jpg" class="fullscreen-bg__video">
-                <source src="video/v4.mp4" type="video/mp4">
-            </video>
-        </a>
-			<div>Feeds Instagram gudangkaos.id</div>
-        </div>
-        
-        <!--Project5-->
-		<div class="project-tile">
-		<a href="#popup4" class="popup-link">
-            <video loop muted autoplay poster="poster.jpg" class="fullscreen-bg__video">
-                <source src="video/v5.mp4" type="video/mp4">
-            </video>
-        </a>
-			<div>Feeds Instagram magangjogja.com</div>
-        </div>
-        
-        <!--Project6-->
-		<div class="project-tile">
-		<a href="#popup5" class="popup-link">
-            <video loop muted autoplay poster="poster.jpg" class="fullscreen-bg__video">
-                <source src="video/v7.mp4" type="video/mp4">
-            </video>
-        </a>
-			<div>Feeds Instagram hmepolines</div>
-		</div>
-    </section>
-	<!-- <button><a href="#" target="_blank">More Projects >></a></button>-->
-</main>
-<main id="sertif">
-    <h1>Sertifikat</h1>
-    <section >
-        <!--Sertif 1-->
-		<div class="project-tile">
-            <a href="#popser1" class="popup-link">
-                <img src="sertif/DG.PNG">
-            </a>
-			<div>Sertifikat Pelatihan<br>Junior Graphic Design</div>
-        </div>
-        <div class="popup-wrapper" id="popser1">
-            <div class="popup-container">
-                <h2>Sertifikat Pelatihan Junior Graphic Design</h2>                    
-                <p>Sertifikat ini saya dapatkan setelah mengikuti pelatihan Junior Design Graphic
-                    yang diselenggarakan oleh Digital Talent Scholarship dalam program Vocational School Graduate Academy (VSGA).
-                    Saya mengikuti pelatihan selama tiga bulan pada tanggal 12 Juli - 23 Oktober 2021.
-                    Saat pelatihan saya menggunakan software <span>Adobe Illustrator, Adobe Photoshop dan CorelDraw</span>.
-                </p>
-                <img src="sertif/Desain.jpg">
-                <a class="popup-close" href="#closed">X</a>
-            </div>
-        </div>
-
-        <!--Sertif 2-->
-		<div class="project-tile" >
-            <a href="#popser2" class="popup-link">
-                <img src="sertif/FED.PNG">
-            </a>
-			<div>Sertifikat Pelatihan<br>Front End Developer</div>
-        </div>
-        <div class="popup-wrapper" id="popser2">
-            <div class="popup-container">
-                <h2>Sertifikat Pelatihan Front End Developer</h2>                    
-                <p>Sertifikat ini saya dapatkan setelah mengikuti pelatihan Front End Developer
-                    yang diselenggarakan oleh Digital Talent Scholarship dalam program Fresh Graduate Academy (FGA).                        Saya mengikuti pelatihan selama satu bulan pada tanggal 7 Maret - 1 April 2022.
-                    Saat pelatihan saya menggunakan bahasa pemrograman <span>HTML, CSS, dan Javascript</span>.
-                    Di pelatihan ini saya belajar melalui situs web <span>progate.com</span>, di pelatihan ini saya 
-                    mendapatkan akun premium secara gratis. Saat pelatihan, seain belajar HTML, CSS, dan Javascript saya juga bisa membuka 
-                    pelajaran lain seperti <span>Sass dan github</span>. Berikut ini lampiran sertifikat yang saya peroleh.<br><br>
-                </p>
-                <img src="sertif/HTMLCSS.jpg">
-                <img src="sertif/JS.jpg">
-                <img src="sertif/Git.jpg">
-                <a class="popup-close" href="#closed">X</a>
-            </div>
-        </div>
-
-        <!--Sertif 3-->    
-		<div class="project-tile">
-            <a href="#popser3" class="popup-link">
-                <img src="sertif/PCC.png">
-            </a>
-			<div>Sertifikat Polytechnic<br>Computer Club</div>
-        </div>
-        <div class="popup-wrapper" id="popser3">
-            <div class="popup-container">
-                <h2>Sertifikat Polytechnic Computer Club</h2>                    
-                <p>Sertifikat ini saya dapatkan setelah mengikuti Unit Kegiatan Mahasiswa
-                    yang berkaitan dengan program studi kuliah saya yaitu teknik informatika.
-                    Saya mengikuti kegiatan mahasiswa ini dengan tujuan untuk menambah relasi serta wawasan 
-                    mengenai dunia teknologi yang tidak saya dapatkan dari mata kuliah saya. Selain itu saya 
-                    juga mengikuti beberapa program kerja yang diselenggarakan oleh UKM PCC ini, berikut ini
-                    lampiran sertifikat yang saya peroleh setelah mengikuti beberapa kepanitiaan<br><br>
-                </p>
-                <img src="sertif/PCC.png">
-                <img src="sertif/SEMNAS20.jpg">
-                <img src="sertif/TECH20.jpg">
-                <a class="popup-close" href="#closed">X</a>
-            </div>
-        </div>
-
-        <!--Sertif 4-->
-		<div class="project-tile">
-            <a href="#popser4" class="popup-link">
-                <img src="sertif/HME1.jpg">
-            </a>
-			<div>Sertifikat Himpunan<br>Mahasiswa Elektro</div>
-        </div>
-        <div class="popup-wrapper" id="popser4">
-            <div class="popup-container">
-                <h2>Sertifikat Himpunan Mahasiswa Elektro</h2>                    
-                <p>Sertifikat ini saya dapatkan setelah mengikuti Himpunan Mahasiswa Elektro.
-                    Saya mengikuti kegiatan mahasiswa ini dengan tujuan untuk melatih kemampuan saya dalam berorganisasi 
-                    dan juga menambah relasi serta melatih diri untuk bersosialisasi yang baik.
-                    Dalam organisasi ini juga terdapat banyak proker yang melatih saya dalam hal kepanitiaan, khususnya kerjasama tim.
-                    Saat menjalankan beberapa proker, saya pernah menjadi penanggung jawab dalam divisi logistik(desain), Sekretaris, Perlengkapan, dan Konsumsi.
-                    Berikut ini lampiran sertifikat yang saya peroleh setelah mengikuti beberapa kepanitiaan<br><br>
-                </p>
-                <img src="sertif/HME1.jpg">
-                <img src="sertif/PSemNas.jpg">
-                <img src="sertif/PEMILU.jpg">
-                <img src="sertif/FKBSE.jpg">
-                <img src="sertif/ECC.jpg">
-                
-                <a class="popup-close" href="#closed">X</a>
-            </div>
-        </div>
-
-        <!--Sertif5-->
-		<div class="project-tile">
-            <a href="#popser5" class="popup-link">
-                <img src="sertif/bem.png">
-            </a>
-			<div>Sertifikat Lainya</div>
-        </div>
-        <div class="popup-wrapper" id="popser5">
-            <div class="popup-container">
-                <h2>Sertifikat Peserta Kegiatan</h2>                    
-                <p>Sertifikat ini saya dapatkan setelah mengikuti beberapa
-                    kegiatan seperti seminar dan kegiatan lainya.<br><br>
-                </p>
-                <img src="sertif/bem.png">
-                <img src="sertif/fkbsep.jpg">
-                <img src="sertif/kwu.jpg">
-                <img src="sertif/pesima.jpg">
-                <img src="sertif/tech19.jpg">
-                <img src="sertif/semnasp.jpg">
-                <img src="sertif/warna.jpg">
-                <img src="sertif/ldk.jpg">
-                <img src="sertif/sert.jpg">
-                <img src="sertif/kkl.jpg">
-                    
-                <a class="popup-close" href="#closed">X</a>
-            </div>
-        </div>
-
-        <!--Sertif 6-->    
-		<div class="project-tile">
-            <a href="#popser6" class="popup-link">
-                <img src="sertif/magang.jpg">
-            </a>
-			<div>Sertifikat Magang</div>
-        </div>
-        <div class="popup-wrapper" id="popser6">
-            <div class="popup-container">
-                <h2>Sertifikat Magang</h2>                    
-                <p>Sertifikat ini saya dapatkan setelah mengikuti magang di SevenInc sebagai desainer grafis selama 3 bulan.<br><br></p>
-                <img src="sertif/magang.jpg">
-                    
-                <a class="popup-close" href="#closed">X</a>
-            </div>
-        </div>
-
-    </section>
-
-    <!--Project1-->
-    <div class="popup-wrapper" id="popup">
-        <div class="popup-container">
-            <h2>Feeds Instagram MakeOver.id</h2>                    
-            <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
-                Feeds Instagram yang bertujuan untuk mengiklankan sebuah jasa editing video agar menarik perhatian costumer
-                jika ingin membuat video seperti video undangan ulang tahun, 
-                undangan pernikahan, jasa untuk joki tugas, dan sejenisnya.
-                Berikut ini beberapa desain yang saya buat.<br><br><br><br><br><br><br><br><br><br>
-            </p>
-
-            <div class="slide-foto">
-                <div class="wrapper">
-                    <img src="MO/1.png">
-                    <img src="MO/2.png">
-                    <img src="MO/3.png">
-                    <img src="MO/4.png">
-                    <img src="MO/5.png">
-                    <img src="MO/6.png">
-                    <img src="MO/7.png">
-                    <img src="MO/8.png">
-                    <img src="MO/9.png">
-                    <img src="MO/10.png">
-                    <img src="MO/11.png">
-                    <img src="MO/12.png">
-                </div>
-                <a href="#">Lihat Lebih Banyak</a>
-            </div>
-            <a class="popup-close" href="#closed">X</a>
-        </div>
-    </div>
-
-    <!--Project2-->
-    <div class="popup-wrapper" id="popup1">
-        <div class="popup-container">
-            <h2>Feeds Instagram jahitpakaian.com</h2>                    
-            <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
-                Feeds Instagram yang bertujuan untuk mengiklankan sebuah jasa konveksi untuk PDL.
-                Berikut ini beberapa desain yang saya buat.<br><br><br><br><br><br><br><br><br><br>
-            </p>
-
-            <div class="slide-foto">
-                <div class="wrapper">
-                    <img src="pdl/1.png">
-                    <img src="pdl/2.png">
-                    <img src="pdl/3.png">
-                    <img src="pdl/4.png">
-                    <img src="pdl/5.png">
-                    <img src="pdl/6.png">
-                    <img src="pdl/7.png">
-                    <img src="pdl/8.png">
-                    <img src="pdl/9.png">
-                </div>
-                <a href="#">Lihat Lebih Banyak</a>
-
-            </div>
+            <div class="popup-wrapper" id="popup2">
+                <div class="popup-container">
+                        <h2>Feeds Instagram Dakwah Islami</h2>                    
+                        <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
+                            Feeds Instagram dakwah yang bertujuan untuk memberi informasi
+                            dan juga motivasi tentang agama islam kepada yang melihat kontent ini.
+                            Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
+                        </p>
             
-            <a class="popup-close" href="#closed">X</a>
-        </div>
-    </div>
-
-    <!--Project3-->
-    <div class="popup-wrapper" id="popup2">
-        <div class="popup-container">
-                <h2>Feeds Instagram Dakwah Islami</h2>                    
-                <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
-                    Feeds Instagram dakwah yang bertujuan untuk memberi informasi
-                    dan juga motivasi tentang agama islam kepada yang melihat kontent ini.
-                    Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
-                </p>
-    
-                <div class="slide-foto">
-                    <div class="wrapper">
-                        <img src="dkw/1.png">
-                        <img src="dkw/2.png">
-                        <img src="dkw/3.png">
-                        <img src="dkw/4.png">
-                        <img src="dkw/5.png">
-                        <img src="dkw/6.png">
-                        <img src="dkw/7.png">
-                        <img src="dkw/8.png">
-                        <img src="dkw/9.png">
-                    </div>
-                    <a href="#" class="see">Lihat Lebih Banyak</a>
+                        <div class="slide-foto">
+                            <div class="wrapper">
+                                <img src="dkw/1.png">
+                                <img src="dkw/2.png">
+                                <img src="dkw/3.png">
+                                <img src="dkw/4.png">
+                                <img src="dkw/5.png">
+                                <img src="dkw/6.png">
+                                <img src="dkw/7.png">
+                                <img src="dkw/8.png">
+                            </div>
+                            <a href="halaman/dkw/Dakwah1.html" target="_blank" class="see">Lihat Lebih Banyak</a>
+                        </div>
+                    <a class="popup-close" href="#closed">X</a>
                 </div>
-            <a class="popup-close" href="#closed">X</a>
-        </div>
-    </div>
+            </div>
 
-    <!--Project4-->
-    <div class="popup-wrapper" id="popup3">
-        <div class="popup-container">
-                <h2>Feeds Instagram gudangkaos.id</h2>                    
-                <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
-                    Feeds Instagram Konveksi custom kaos yang bertujuan untuk menarik perhatian
-                    customer yang ingin membuat kaos, jersey atau sejenisnya. Di feeds ini menjelaskan
-                    customer bisa membuat kaos sesuai desain yang diinginkan.
-                    Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
-                </p>
-    
-                <div class="slide-foto">
-                    <div class="wrapper">
-                        <img src="yel/1.png">
-                        <img src="yel/2.png">
-                        <img src="yel/3.png">
-                        <img src="yel/4.png">
-                        <img src="yel/5.png">
-                        <img src="yel/6.png">
-                        <img src="yel/7.png">
-                        <img src="yel/8.png">
-                        <img src="yel/9.png">
-                        <img src="yel/10.png">
-                    </div>
-                    <a href="#">Lihat Lebih Banyak</a>
+        <!--Project4-->
+            <div class="popup-wrapper" id="popup3">
+                <div class="popup-container">
+                        <h2>Feeds Instagram gudangkaos.id</h2>                    
+                        <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
+                            Feeds Instagram Konveksi custom kaos yang bertujuan untuk menarik perhatian
+                            customer yang ingin membuat kaos, jersey atau sejenisnya. Di feeds ini menjelaskan
+                            customer bisa membuat kaos sesuai desain yang diinginkan.
+                            Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
+                        </p>
+            
+                        <div class="slide-foto">
+                            <div class="wrapper">
+                                <img src="yel/1.png">
+                                <img src="yel/2.png">
+                                <img src="yel/3.png">
+                                <img src="yel/4.png">
+                                <img src="yel/5.png">
+                                <img src="yel/6.png">
+                                <img src="yel/7.png">
+                                <img src="yel/8.png">
+                                <img src="yel/9.png">
+                                <img src="yel/10.png">
+                            </div>
+                            <a href="halaman/yel/gdk.html" target="_blank">Lihat Lebih Banyak</a>
+                        </div>
+                    <a class="popup-close" href="#closed">X</a>
                 </div>
-            <a class="popup-close" href="#closed">X</a>
-        </div>
-    </div>
+            </div>
 
-    <!--Project5-->
-    <div class="popup-wrapper" id="popup4">
-        <div class="popup-container">
-                <h2>Feeds Instagram magangjogja.com</h2>                    
-                <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
-                    Feeds Instagram tentang magangjogja.com. Di feeds instagram ini bisa dilihat
-                    mengenai informasi suatu tempat magang di jogja dan kegiatan di dalamnya.
-                    Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
-                </p>
-    
-                <div class="slide-foto">
-                    <div class="wrapper">
-                        <img src="mj/1.png">
-                        <img src="mj/2.png">
-                        <img src="mj/3.png">
-                        <img src="mj/4.png">
-                        <img src="mj/5.png">
-                        <img src="mj/6.png">
-                        <img src="mj/7.png">
-                        <img src="mj/8.png">
-                        <img src="mj/9.png">
-                        <img src="mj/10.png">
-                    </div>
-                    <a href="#">Lihat Lebih Banyak</a>
+        <!--Project5-->
+            <div class="popup-wrapper" id="popup4">
+                <div class="popup-container">
+                        <h2>Feeds Instagram magangjogja.com</h2>                    
+                        <p>Project ini merupakan sebuah tugas yang dibuat saat magang berupa 
+                            Feeds Instagram tentang magangjogja.com. Di feeds instagram ini bisa dilihat
+                            mengenai informasi suatu tempat magang di jogja dan kegiatan di dalamnya.
+                            Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
+                        </p>
+            
+                        <div class="slide-foto">
+                            <div class="wrapper">
+                                <img src="mj/1.png">
+                                <img src="mj/2.png">
+                                <img src="mj/3.png">
+                                <img src="mj/4.png">
+                                <img src="mj/5.png">
+                                <img src="mj/6.png">
+                                <img src="mj/7.png">
+                                <img src="mj/8.png">
+                                <img src="mj/9.png">
+                                <img src="mj/10.png">
+                            </div>
+                            <a href="halaman/mj/mj.html" target="_blank">Lihat Lebih Banyak</a>
+                        </div>
+                    <a class="popup-close" href="#closed">X</a>
                 </div>
-            <a class="popup-close" href="#closed">X</a>
-        </div>
-    </div>
+            </div>
 
-    <!--Project6-->
-    <div class="popup-wrapper" id="popup5">
-        <div class="popup-container">
-                <h2>Feeds Instagram hmepolines</h2>                    
-                <p>Project ini merupakan sebuah tugas yang dibuat saat menjadi fungsionaris
-                    di Himpunan Mahasiswa Elektro Polines. Saat itu saya yang bertanggung jawab atas
-                    sosial media hmepolines.
-                    Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
-                </p>
-    
-                <div class="slide-foto">
-                    <div class="wrapper">
-                        <img src="hme/1.png">
-                        <img src="hme/2.png">
-                        <img src="hme/3.png">
-                        <img src="hme/4.png">
-                        <img src="hme/5.png">
-                        <img src="hme/6.png">
-                        <img src="hme/7.png">
-                        <img src="hme/8.png">
-                        <img src="hme/9.png">
-                        <video loop muted autoplay poster="poster.jpg" class="video">
-                            <source src="hme/v1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <a href="#">Lihat Lebih Banyak</a>
+        <!--Project6-->
+            <div class="popup-wrapper" id="popup5">
+                <div class="popup-container">
+                        <h2>Feeds Instagram hmepolines</h2>                    
+                        <p>Project ini merupakan sebuah tugas yang dibuat saat menjadi fungsionaris
+                            di Himpunan Mahasiswa Elektro Polines. Saat itu saya yang bertanggung jawab atas
+                            sosial media hmepolines.
+                            Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
+                        </p>
+            
+                        <div class="slide-foto">
+                            <div class="wrapper">
+                                <img src="hme/1.png">
+                                <img src="hme/2.png">
+                                <img src="hme/3.png">
+                                <img src="hme/4.png">
+                                <img src="hme/5.png">
+                                <img src="hme/6.png">
+                                <img src="hme/7.png">
+                                <img src="hme/8.png">
+                                <img src="hme/9.png">
+                                <video loop muted autoplay class="video">
+                                    <source src="hme/v1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <a href="halaman/hme/hme.html" target="_blank">Lihat Lebih Banyak</a>
+                        </div>
+                    <a class="popup-close" href="#closed">X</a>
                 </div>
-            <a class="popup-close" href="#closed">X</a>
+            </div>
+
+        <!--Project7-->
+            <div class="popup-wrapper" id="popup6">
+                <div class="popup-container">
+                        <h2>Feeds Instagram sususemua</h2>                    
+                        <p>Project ini merupakan desain feeds instagram yang saya buat ketika saya freelance.
+                            feeds instagram ini bertemakan popart untuk digital marketing produk susu segar.
+                            Berikut ini beberapa desain yang saya buat<br><br><br><br><br><br><br><br><br><br>
+                        </p>
+            
+                        <div class="slide-foto">
+                            <div class="wrapper">
+                                <img src="halaman/sumu/1.png">
+                                <img src="halaman/sumu/2.png">
+                                <img src="halaman/sumu/3.png">
+                                <img src="halaman/sumu/4.png">
+                                <img src="halaman/sumu/5.png">
+                                <img src="halaman/sumu/6.png">
+                                <img src="halaman/sumu/7.png">
+                                <img src="halaman/sumu/8.png">
+                                <img src="halaman/sumu/9.png">
+                                <img src="halaman/sumu/10.png">
+                            </div>
+                            <a href="halaman/sumu/sumu.html" target="_blank">Lihat Lebih Banyak</a>
+                        </div>
+                    <a class="popup-close" href="#closed">X</a>
+                </div>
+            </div>
+
+        <!--Project8-->
+            <div class="popup-wrapper" id="popup7">
+                <div class="popup-container">
+                        <h2>Story Instagram sususemua</h2>                    
+                        <p>Project ini merupakan desain story instagram yang saya buat ketika saya freelance.
+                            feeds instagram ini bertemakan popart untuk digital marketing produk susu segar.
+                            Berikut ini beberapa desain story yang saya buat<br><br><br><br><br><br><br><br><br><br>
+                        </p>
+            
+                        <div class="slide-foto">
+                            <div class="wrapper story">
+                                <img src="halaman/sumu/story/1.jpg">
+                                <img src="halaman/sumu/story/2.jpg">
+                                <img src="halaman/sumu/story/3.jpg">
+                                <img src="halaman/sumu/story/4.jpg">
+                                <img src="halaman/sumu/story/5.jpg">
+                                <img src="halaman/sumu/story/1.jpg">
+                                <img src="halaman/sumu/story/2.jpg">
+                                <img src="halaman/sumu/story/3.jpg">
+                                <img src="halaman/sumu/story/4.jpg">
+                                <img src="halaman/sumu/story/5.jpg">
+                                <img src="halaman/sumu/story/1.jpg">
+                                <img src="halaman/sumu/story/2.jpg">
+                                <img src="halaman/sumu/story/3.jpg">
+                                <img src="halaman/sumu/story/4.jpg">
+                                <img src="halaman/sumu/story/1.jpg">
+                                <img src="halaman/sumu/story/2.jpg">
+                                <img src="halaman/sumu/story/3.jpg">
+                                <img src="halaman/sumu/story/4.jpg">
+                                <img src="halaman/sumu/story/5.jpg">
+                                <img src="halaman/sumu/story/1.jpg">
+                                <img src="halaman/sumu/story/2.jpg">
+                                <img src="halaman/sumu/story/3.jpg">
+                                <img src="halaman/sumu/story/4.jpg">
+                                <img src="halaman/sumu/story/5.jpg">
+                                <img src="halaman/sumu/story/1.jpg">
+                                <img src="halaman/sumu/story/2.jpg">
+                                <img src="halaman/sumu/story/3.jpg">
+                                <img src="halaman/sumu/story/4.jpg">
+                            </div>
+                            <a href="halaman/sumu/story/sumu.html" target="_blank">Lihat Lebih Banyak</a>
+                        </div>
+                    <a class="popup-close" href="#closed">X</a>
+                </div>
+            </div>
+
+        
+        <!--Project9-->
+        
+            <div class="popup-wrapper" id="popup8">
+            <div class="popup-container">
+                    <h2>Iklan Jasa titipsini.com</h2>                    
+                    <p>Project ini merupakan desain yang saya buat ketika magang yang berupa iklan.
+                        desain ini bertujuan untuk mengiklankan jasa penitipan titipsini.com.
+                        Berikut ini beberapa desain iklan yang saya buat<br><br><br><br><br><br><br><br><br><br>
+                    </p>
+        
+                    <div class="slide-foto">
+                        <div class="wrapper">
+                            <img src="halaman/adv/1.png">
+                            <img src="halaman/adv/2.png">
+                            <img src="halaman/adv/3.png">
+                            <img src="halaman/adv/4.png">
+                            <img src="halaman/adv/11.png">
+                            <img src="halaman/adv/6.png">
+                            <img src="halaman/adv/7.png">
+                            <img src="halaman/adv/8.png">
+                            <img src="halaman/adv/9.png">
+                            <img src="halaman/adv/10.png">
+                        </div>
+                        <a href="halaman/adv/adv.html" target="_blank">Lihat Lebih Banyak</a>
+                    </div>
+                <a class="popup-close" href="#closed">X</a>
+            </div>
+            </div>  
+        
+        <!--Project10-->
+            <div class="popup-wrapper" id="popup9">
+                <div class="popup-container">
+                        <h2>Story Instagram gudangkaos</h2>                    
+                        <p>Project ini merupakan desain story instagram yang saya buat ketika magang.
+                            Desain ini dibuat satu paket dengan feeds instagram gudangkaos.id.
+                            Berikut ini beberapa desain story yang saya buat<br><br><br><br><br><br><br><br><br><br>
+                        </p>
+            
+                        <div class="slide-foto">
+                            <div class="wrapper story">
+                                <img src="halaman/yel/story/1.png">
+                                <img src="halaman/yel/story/2.png">
+                                <img src="halaman/yel/story/6.png">
+                                <img src="halaman/yel/story/11.png">
+                                <img src="halaman/yel/story/17.png">
+                                <img src="halaman/yel/story/18.png">
+                                <img src="halaman/yel/story/15.png">
+                                <img src="halaman/yel/story/14.png">
+                                <img src="halaman/yel/story/8.png">
+                                <img src="halaman/yel/story/7.png">
+                            </div>
+                            <a href="halaman/yel/story/story.html" target="_blank">Lihat Lebih Banyak</a>
+                        </div>
+                    <a class="popup-close" href="#closed">X</a>
+                </div>
+            </div>
+
+        <!--Project11-->
+            <div class="popup-wrapper" id="popup10">
+                <div class="popup-container">
+                    <h2>Desain Vektor</h2>                    
+                    <p>Desain vektor ini saya buat ketika saya sedang memiliki waktu luang.
+                        Selain karena senang melakukanya, saya bisa melatih diri saya dan belajar lebih banyak lagi mengenai vektor.
+                        Saya menggunakan software Adobe Illustrator untuk mendesain gambar.<br>
+                    </p>
+                    <div class="body">
+                        <h2 style="text-align:center">Desain Vektor</h2>
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 10</div>
+                                <img class="center" src="halaman/vek/1.jpg" style="width:30%" alt="fox">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 10</div>
+                                <img class="center" src="halaman/vek/2.jpg" style="width:30%" alt="fox">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 10</div>
+                                <img src="halaman/vek/3.jpg" class="center" style="width:30%" alt="child">
+                            </div>
+                                
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 10</div>
+                                <img src="halaman/vek/4.jpg" style="width:30%" class="center" alt="child">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">5 / 10</div>
+                                <img src="halaman/vek/5.jpg" style="width:30%" class="center" alt="child">
+                            </div>
+                            <div class="mySlides">
+                                <div class="numbertext">6 / 10</div>
+                                <img class="center" src="halaman/vek/6.jpg" style="width:30%" alt="child">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">7 / 10</div>
+                                <img class="center" src="halaman/vek/7.jpg" style="width:30%" alt="child">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">8 / 10</div>
+                                <img src="halaman/vek/8.png" class="center" style="width:30%" alt="muslimah">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">9 / 10</div>
+                                <img src="halaman/vek/9.png" class="center" style="width:30%" alt="muslim">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">10 / 10</div>
+                                <img src="halaman/vek/10.jpg" class="center" style="width:30%" alt="Masker Boy">
+                            </div>
+
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+
+                            <div class="caption-container">
+                                <p id="caption"></p>
+                            </div>
+
+                            <div class="roww">
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/1.jpg" style="width:10%" onclick="currentSlide(1)" alt="fox-head">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/2.jpg" style="width:10%" onclick="currentSlide(2)" alt="this is fox">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/3.jpg" style="width:10%" onclick="currentSlide(3)" alt="child">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/4.jpg" style="width:10%" onclick="currentSlide(4)" alt="child2">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/5.jpg" style="width:10%" onclick="currentSlide(5)" alt="i'm disgusted">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/6.jpg" style="width:10%" onclick="currentSlide(6)" alt="curious child">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/7.jpg" style="width:10%" onclick="currentSlide(7)" alt="cheerful child">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/8.png" style="width:10%" onclick="currentSlide(8)" alt="muslimah">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/9.png" style="width:10%" onclick="currentSlide(9)" alt="muslim">
+                                </div>
+
+                                <div class="columnslide">
+                                    <img class="demo cursor center1" src="halaman/vek/10.jpg" style="width:10%" onclick="currentSlide(10)" alt="Masker Boy">
+                                </div>
+                            </div>
+                        <script>
+                            let slideIndex = 1;
+                            showSlides(slideIndex);
+
+                            function plusSlides(n) {
+                                showSlides(slideIndex += n);
+                            }
+
+                            function currentSlide(n) {
+                                showSlides(slideIndex = n);
+                            }
+
+                            function showSlides(n) {
+                                let i;
+                                let slides = document.getElementsByClassName("mySlides");
+                                let dots = document.getElementsByClassName("demo");
+                                let captionText = document.getElementById("caption");
+                                if (n > slides.length) {
+                                    slideIndex = 1
+                                }
+                                if (n < 1) {
+                                    slideIndex = slides.length
+                                }
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                for (i = 0; i < dots.length; i++) {
+                                    dots[i].className = dots[i].className.replace(" active", "");
+                                }
+                                slides[slideIndex-1].style.display = "block";
+                                dots[slideIndex-1].className += " active";
+                                captionText.innerHTML = dots[slideIndex-1].alt;
+                            }
+                        </script>
+                    </div>
+                    <a class="popup-close" href="#closed">X</a>
+                </div>
+            </div>
+
+        </main>
+    <footer id="footer">
+        <img class="foot-left" src="me.png">
+        <p>Portfolio</p>
+        <p class="padd">Hubungi saya:</p>
+        <div class="tooltip">
+            <a id="profile-link" href="mailto:tifffanial@gmail.com" target="_blank"><img src="img/em.png" width="50px"></a><span class="tooltiptext">Email</span>
         </div>
-    </div>
-</main>
-<footer id="footer">
-	<div>
-		<a id="profile-link" href="mailto:tifffanial@gmail.com" target="_blank"><img src="img/em.png" width="50px"></a>
-		<p>E-mail</p>
-    </div>
-    <div>
-        <a href="#welcome-section" class="cv"><img src="img/ava.jpeg" width="50px"></a>
-		<p>About Me</p>
-	</div>
-	<div>
-		<a href="https://wa.me/6285640160949" target="_blank"><img src="img/wa.png" width="50px"></a>
-		<p>Whatsapp</p>
-	</div>
-</footer>
-<script type="text/javascript">
-	const projectName = 'portfolio';
-localStorage.setItem('example_project', 'Personal Portfolio');
+        <div class="tooltip">
+            <a href="https://wa.me/6285640160949" target="_blank"><img src="img/wa.png" width="50px"></a><span class="tooltiptext">Whatsapp</span>
+        </div>
+        <h1>|</h1>
+        <div class="cuvi tooltip">
+            <a href="https://bit.ly/CVTiffanial" target="_blank"><img width="50px">CV</a><span class="tooltiptext">Curriculum Vitae</span>
+        </div>
+        <div class="tooltip">
+            <a href="#welcome-section" class="cv"><img src="img/ava.jpeg" width="50px"></a><span class="tooltiptext">Tentang Saya</span>
+        </div>
+    </footer>
+</div>
+<script>
+    //filter button    
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+    //filter button end
+
+    //loader
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 2000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    //loaderend
+
+    /* dropdown mobile*/
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+        });
+        }
+    /*dropdown mobile end*/
+
+    /* dropdown click*/
+        function myFunctionB() {
+            document.getElementById("myDropdownB").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtnb')) {
+            var myDropdown = document.getElementById("myDropdownB");
+                if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+                }
+            }
+        }
+    /*dropdown click end*/
+    
+    //hide on scroll
+    //hide on scroll
 </script>
 </body>
 </html>

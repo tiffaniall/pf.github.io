@@ -3,17 +3,233 @@
 *{
 	margin:0px;
     padding:0px;
-    font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
+}
+
+html{
+	scroll-behavior: smooth;
 }
 #welcome-section{
 	background-image: url("tiff.png");
 	background-size: cover;
 	display:flex;
 	flex-direction:column;
-	height:100vh;
-    justify-content:center;
+	height:110vh;
+	justify-content:center;
 }
+  .main{
+	max-width: 1000px;
+	margin: auto;
+	box-sizing: border-box;
+  }
 
+  .row {
+	margin: 10px 16px;
+	box-sizing: border-box;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+	padding: 8px;
+	box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+	float: left;
+	width: 31%; /* Hide all elements by default */
+	display: none;
+	box-sizing: border-box;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+	box-sizing: border-box;
+  }
+  
+  /* Content */
+  .content {
+	background-color: white;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+  }
+  .content div{
+	  box-sizing: border-box;
+	  text-align: center;
+	  justify-content: center;
+  }
+  /* The "show" class is added to the filtered elements */
+  .show {
+	display: block;
+	box-sizing: border-box;
+  }
+
+  #myBtnContainer{
+		display: flex;
+		justify-content: center;
+	}
+	
+/*dropdown portfolio navbar*/
+
+	.dropdown {
+		float: left;
+		overflow: hidden;
+	}
+	
+	.dropdown .dropbtnb {
+		cursor: pointer;
+		font-size: 18px;  
+		text-align: center;
+		padding: 12px;
+		text-decoration: none;
+		line-height: 20px;
+		border-radius: 4px;
+		box-sizing: border-box;
+		border: none;
+		outline: none;
+		color: #000000;
+		background-color: inherit;
+		font-family: inherit;
+		margin: 0;
+	}
+	
+	.dropdown:hover .dropbtnb, .dropbtnb:focus {
+		background-color: #ddd;
+	}
+	
+	.dropdown-contentB {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	
+	.dropdown-contentB a {
+		float: none;
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+	
+	.dropdown-contentB a:hover {
+		background-color: #ddd;
+		padding-right: 136px;
+	}
+	
+	.show {
+		display: block;
+	}
+/*dropdown portfolio navbar end*/
+
+/* dropdown android responsive */
+
+	.active{
+		background-color: #444444;
+	}
+	.dropdown-btn{
+		cursor: pointer;
+		font-size: 16px;  
+		text-align: left;
+		padding: 12px 60px 12px 12px;
+		text-decoration: none;
+		line-height: 20px;
+		border-radius: 1px;
+		box-sizing: border-box;
+		border: none;
+		outline: none;
+		color: #000000;
+		background-color: inherit;
+		font-family: inherit;
+		margin: 0;	
+	}
+	.btn {
+		border: none;
+		outline: none;
+		padding: 12px 16px;
+		background-color: white;
+		cursor: pointer;
+		box-sizing: border-box;
+	}
+	.btn:hover {
+		background-color: #ddd;
+		box-sizing: border-box;
+	}
+	.btn.active {
+		background-color: #666;
+		color: white;
+		box-sizing: border-box;
+	}
+	.dropbtn {
+		background-color: #f1f1f1;
+		padding: 21px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	}
+	.dropbtn:hover, .dropbtn:focus, {
+		background-color: #A7A7A7;
+		color: white;
+	}
+
+	.lildrop{
+		font-size: 15px;
+		background-color: rgba(228, 91, 91, 0.83);
+		
+		box-shadow: inset 0 0 10px #727272;
+	}
+
+	.one:hover{
+		box-shadow: 0px 8px 10px 0px #585858;
+	}
+
+	.menu-icon {
+		float: right;
+		display: inline-block;
+		margin-top: 20px;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: rgb(196, 196, 196);
+		margin-top: 20px;
+		min-width: 160px;
+		overflow: auto;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		right: 0;
+		z-index: 1;
+	}
+	.fa-bars{
+		color: #333;
+		font-size: 30px;
+	}
+
+	.dropdown-container{
+		display: none;
+	}
+	.dropdown-content a {
+		color: black;
+		padding: 12px 60px 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	.menu-icon a:hover,  .dropdown-btn:hover {
+		background-color: #ddd;
+	}
+	.show {display: block;}
+/* dropdown android responsive end */
+
+/*mobile responsive*/
+  
+/*mobile end*/
 #welcome-section ul{
 	margin-left: 40%;
 	margin-top: 50px;
@@ -56,8 +272,8 @@ header li{
 .visible{
 	margin-bottom: 5px;
 	text-align: left;
-	margin: 5% 30% 0 5%;
-	width: 100%;
+	margin: 5% 0 0 5%;
+	width: 70%;
 }
 
 .visible:hover + .hidden{
@@ -88,34 +304,65 @@ nav{
 	box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
 	display: inline;
 }
+/*header*/
+	.fixed{
+		position: fixed;
+		width: 100%;
+		z-index: 5;
+	}
+	.header img{
+		width: 35px;
+		margin-left: 10px;
+		padding: -10px;
+	}
 
-.header-left img{
-	width: 35px;
-	margin-left: 10px;
-	margin-top: 10px;
-}
+	.header {
+		overflow: hidden;
+		background-color: #f1f1f1;
+		padding: 10px 10px;
+		box-sizing: border-box;
+		height: 65px;
+	}
 
-.conthead{
-	display: flex;
-	justify-content: space-between;
-}
-.header-left{
-	display: flex;
-}
+	.header a {
+		float: left;
+		color: black;
+		text-align: center;
+		padding: 12px;
+		text-decoration: none;
+		font-size: 18px; 
+		line-height: 20px;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
 
-.header-left p{
-	margin-left: 10px;
-	margin-top: 18px;
-}
+	.header a.logo {
+		box-sizing: border-box;
+		font-size: 15px;
+	}
 
-.header-right{
-	margin-top: 18px;
-}
+	.header a:hover {
+		box-sizing: border-box;
+		background-color: #ddd;
+		color: black;
+	}
 
+	.header a.active {
+		background-color: #707070;
+		color: white;
+		box-sizing: border-box;
+	}
+
+	.header-right {
+		float: right;
+		box-sizing: border-box;
+	}
+/*headerend*/
 nav a{
 	font-size:20px;
 	padding: 25px;
 }
+
 nav a:hover{
 	color:#FFFFFF;
 	background-color: #B1B1B1;
@@ -132,14 +379,9 @@ nav li{
 	justify-content: flex-end;
 }
 
-.menu-icon{
-	display: none;
-	color: grey;
-	font-size: 30px;
+.titip{
+	padding-top: 50px;
 }
-
-
-
 
 main section{
 	margin:20px 10% 20px 10%;
@@ -150,6 +392,13 @@ main section{
 	
 }
 
+#slide-down{
+	margin:20px 10% 20px 10%;
+	display:grid;
+	grid-template:repeat(1,1fr)/repeat(3,1fr);
+	grid-column-gap:10px;
+	justify-items:center;
+}
 .project-tile{
 	margin-bottom:80px;
 	display:flex;
@@ -167,10 +416,14 @@ main section{
 	width: 250px;
 	height: 150px;
 }
+
 main{
 	padding-top:120px;
 	display:flex;
 	flex-direction:column;
+}
+.btnless .btnup{
+	align-content: center;
 }
 
 main button {
@@ -179,16 +432,16 @@ main button {
 	border-color:#7C7C7C;
 	cursor:pointer;
 	box-shadow:none;
-	width:auto;
 	align-self:center;
-	padding:5px 10px 5px 10px;
+	padding:5px 10px;
 	margin-bottom:20px;
 }
+
 main a,main a:hover,main a:active,main a:focus,main a:visited{
 	text-decoration:none;
 	color:#AEB6B9;
 }
-main section div a:hover{
+main section div a:hover, .up div{
 	border-radius:10px;
 	box-shadow:
 		-5px 5px 20px,
@@ -200,7 +453,7 @@ a, a:hover, a:active, a:focus, a:visited{
 	color:black;
 	text-decoration:none;
 }
-main section div a img{
+main section div a img, .up div{
 	border:solid;
 	border-color:#7C7C7C;
 	border-width:2px;
@@ -209,19 +462,35 @@ main section div a img{
 	width:auto;
 	overflow:hidden;
 }
+
+footer h1{
+	font-size: 40px;
+}
+
+.prof{
+	font-size: 10px;
+}
+
+.foot-left{
+	width: 35px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
 footer{
 	background-color:#FFFFFF;
-	height:25vh;
+	height:18vh;
 	display:flex;
 	flex-direction:row;		align-items:center;
 	justify-content:space-evenly;
 	box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+	
 }
 footer div a{
 	background-color:#FFFFFF;
 	border-radius:50%;
-	height:90px;
-	width:90px;
+	height:25px;
+	width:25px;
 	display:flex;
 	align-items:center;
 	text-align: center;
@@ -229,6 +498,14 @@ footer div a{
 	white-space:pre-line;
 	overflow:hidden;
 }
+
+.cuvi a{
+	background-color: #333;
+	color: white;
+	font-size: 14px;
+	padding-right: 4px;
+}
+
 footer div a:hover{
 	border-radius:50%;
 	box-shadow:
@@ -240,11 +517,11 @@ footer div a:hover{
 footer div a img{
 	border-radius:10%;
 }
-footer div p{
-	text-align:center;
+.padd{
+	margin-left: 800px;
 }
 
-main h1{
+main h1, .main h1{
 	padding-bottom: 10px;
 	border-bottom: 2px solid #C9C9C9;
 	margin-bottom: 40px;
@@ -253,6 +530,9 @@ main h1{
 	text-align: center;
 }
 
+.main h1{
+	margin-top: 100px;
+}
 .conme{
 	border: 1px solid #AEB6B9;
 	border-radius: 20px;
@@ -267,7 +547,7 @@ main h1{
 
 /*style untuk popup */	
 #popup, #popup1, #popup2, #popup3, 
-#popup4, #popup5, #popser1, #popser2, 
+#popup4, #popup5, #popup6, #popup7, #popup8, #popup9, #popup10, #popup11, #popup12, #popser1, #popser2, 
 #popser3, #popser4, #popser5, #popser6 {
 	display: none;
 	opacity: 0;
@@ -280,7 +560,8 @@ span{
 }
 
 #popup:target, #popup1:target, #popup2:target, #popup3:target,
- #popup4:target, #popup5:target, #popser1:target, 
+ #popup4:target, #popup5:target, #popup6:target, #popup7:target, 
+ #popup8:target, #popup9:target, #popup10:target, #popup11:target, #popup12:target, #popser1:target, 
  #popser2:target, #popser3:target, #popser4:target, 
  #popser5:target, #popser6:target{
 	display: flex;
@@ -334,6 +615,11 @@ a.popup-close {
 	box-shadow: 10px 25px 30px rgba(75, 75, 75, 0.13);
 	text-align: center;
 	left: 50%;
+}
+
+.story{
+	height: 300px;
+	width: 100%;
 }
 
 .slide-foto:hover{
@@ -422,3 +708,226 @@ img{
 .video{
 	width: 400px;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: #B8B8B8;
+  color: #575757;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -40px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 10px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#loader {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #5C5C5C;
+	animation: bounce 0.5s;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+	animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+	from {
+		transform: translate3d(0, 200px, 0);
+	}
+	to {
+		transform: translate3d(0, 400px, 0);
+	}
+}
+/* Prefix Support */
+  
+ball {
+	-webkit-animation-name: bounce;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: cubic-bezier(
+	.5, 0.05, 1, .5);
+	-webkit-animation-iteration-count: infinite;
+}
+  
+@-webkit-keyframes bounce {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		-webkit-transform: translate3d(0, 200px, 0);
+		transform: translate3d(0, 200px, 0);
+	}
+}
+
+.bocont{
+	display: flex;
+	justify-content: center;
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+}
+
+/* Slide gallery */
+		.roww img, .mySlides img, .container, .mySlides, .center, .center1, 
+		.prev, .next, .numbertext, .caption-container, .roww, .columnslide,
+		.demo, script .active,
+		.demo:hover {
+		box-sizing: border-box;
+		}
+
+		.roww img, .mySlides img {
+		vertical-align: middle;
+		}
+
+		/* Position the image container (needed to position the left and right arrows) */
+		.container {
+		position: relative;
+		}
+
+		/* Hide the images by default */
+		.mySlides {
+		display: none;
+		}
+
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 60%;
+		}
+
+		.center1 {
+			display: inline;
+			margin: 0 -0.3%;
+			width: 30%;
+		}
+		/* Add a pointer when hovering over the thumbnail images */
+		.cursor {
+		cursor: pointer;
+		}
+
+		/* Next & previous buttons */
+		.prev,
+		.next {
+		cursor: pointer;
+		position: absolute;
+		top: 40%;
+		width: auto;
+		padding: 16px;
+		margin-top: 60px;
+		color: #000000;
+		background-color: rgba(255, 255, 255, 0.1);
+		font-weight: bold bold;
+		font-size: 20px;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+		-webkit-user-select: none;
+		
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		right: 350px;
+		border-radius: 3px 0 0 3px;
+		}
+		.prev{
+			left: 350px;
+		}
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover,
+		.next:hover {
+		background-color: rgba(0, 0, 0, 0.8);
+		color: white;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+		}
+
+		/* Container for image text */
+		.caption-container {
+		text-align: center;
+		background-color: #222;
+		padding: 2px 16px;
+		color: white;
+		}
+
+		.roww:after {
+		content: "";
+		display: table;
+		clear: both;
+		}
+
+		/* Six columns side by side */
+		.columnslide {
+		display: inline;
+		justify-content: space-around;
+		width: 13.66%;
+		}
+
+		/* Add a transparency effect for thumnbail images */
+		.demo {
+		opacity: 0.6;
+		}
+
+		script .active,
+		.demo:hover {
+		opacity: 1;
+		}
+/* Slide gallery end*/

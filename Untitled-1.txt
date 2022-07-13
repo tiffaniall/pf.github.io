@@ -1,0 +1,240 @@
+    HTML
+<nav id="navbar">
+    <div class="conthead">
+        <div class="header-left">
+
+        </div>
+        <div class="menu-icon">
+            <span class="fa fa-bars menu-icon"></span>
+        </div>
+        <div class="header-right">
+            <a href="#welcome-section">HOME</a>
+            <a href="#main">PROJECTS</a>
+            <a href="#sertif">SERTIFIKAT</a>
+            <a href="#footer">CONTACT</a>
+        </div>
+    </div>
+</nav>
+<nav id="navbar">
+    <span class="fa fa-bars menu-icon"></span>
+    <div class="header-content">
+        <a href="#welcome-section">HOME</a>
+        <a href="#main">PROJECTS</a>
+        <a href="#sertif">SERTIFIKAT</a>
+        <a href="#footer">CONTACT</a>
+    </div>
+    <div class="left">
+        <img src="me.png">
+        <p>Portfolio</p>
+    </div>
+</nav>
+
+
+   CSS
+
+
+
+.left{
+    justify-content: flex-start;
+	width: 4%;
+	margin-left: 15px;
+	font-size: 14px;
+}
+
+.left p{
+	margin-left: 5px;
+}
+
+.menu-icon {
+	color: #5F5F5F;
+	float: right;
+	font-size: 50px;
+	display: none;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+@media (max-width:800px){
+
+    nav{
+        background-color:#FFFFFF;
+        height:60px;
+        width:100%;
+        position:fixed;
+        display:flex;
+        color:black;
+        z-index:1;
+        box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+    }
+    
+    nav .header-content{
+        justify-content:flex-end;
+    }
+
+        .menu-icon {
+        color: #5F5F5F;
+        float: right;
+        font-size: 50px;
+        display: none;
+        margin-right: 10px;
+    }
+    .left{
+        justify-content: flex-start;
+        width: 4%;
+        margin-left: 15px;
+        font-size: 14px;
+    }
+    
+    .left p{
+        margin-left: 5px;
+    }
+
+
+
+
+@media (max-width:667px){
+         .menu-icon {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .header-content{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RESPONSIVE
+
+@media (max-width:800px){
+
+	nav .header-content{
+        background-color:#FFFFFF;
+		height:60px;
+		width:100%;
+		position:fixed;
+		display:flex;
+		align-items:center;
+		justify-content:flex-end;
+		color:black;
+		z-index:1;
+		box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+	}
+	main section{
+		margin:20px 10% 20px 10%;
+		display:grid;
+		grid-template:repeat(6,1fr)/1fr;
+		justify-items:center;
+	}
+	footer{
+		background-color:#FFFFFF;
+		height:25vh;
+		display:flex;
+		align-items:center;
+		justify-content:space-evenly;
+		box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+    }
+    .popup-container {
+        width:100%;
+        height: 70%;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+}
+
+@media (max-width:667px){
+
+	
+	main section{
+		margin:20px 10% 20px 10%;
+		display:grid;
+		grid-template:repeat(6,1fr)/1fr;
+		justify-items:center;
+	}
+	footer{
+		background-color:#FFFFFF;
+		height:20vh;
+		display:flex;
+		align-items:center;
+		justify-content:space-evenly;
+		box-shadow: 0px 0px 10px rgba(75, 75, 75, 0.55);
+    }
+    .popup-container {
+        width:70%;
+        height: 50%;
+        margin-top: 10%;
+    }
+
+    .slide-foto{
+        width: 70%;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right : 10px;
+    }
+
+    nav .header-content{
+        display: none;
+    }
+}
+
+
+
+tabel hidden
+
+<div class="hidden">
+                    <table>
+                        <tr>
+                            <td colspan="2" align="center" ><img class="ava" src="img/ava.jpeg" alt="Tiffani"  style="width:200px"></td>
+                        </tr>
+                        <tr height="40px">
+                            <th width="150px">Nama</th>
+                            <td>: Tiffani Afiollalia Lorenza</td>
+                        </tr>
+                        <tr height="40px">
+                            <th>Tanggal Lahir</th>
+                            <td>: 19 September 2000</td>
+                        </tr>
+                        <tr height="40px">
+                            <th>Alamat</th>
+                            <td>: Temanggung, 56258, Indonesia</td>
+                        </tr>
+                        <tr height="40px">
+                            <th>Status</th>
+                            <td>: Fresh Graduate</td>
+                        </tr>
+                        <tr height="40px">
+                            <th>Alumni</th>
+                            <td>: D3 Teknik Informatika POLINES</td>
+                        </tr>
+                        <tr height="40px">
+                            <th>Agama</th>
+                            <td>: Islam</td>
+                        </tr>
+                    </table>

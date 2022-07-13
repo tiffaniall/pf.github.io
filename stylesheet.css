@@ -175,14 +175,14 @@ html{
 		border: none;
 		cursor: pointer;
 	}
-	.dropbtn:hover, .dropbtn:focus, {
-		background-color: #A7A7A7;
+	.dropbtn:hover, .dropbtn:focus {
+		background-color : #A7A7A7;
 		color: white;
 	}
 
 	.lildrop{
 		font-size: 15px;
-		background-color: rgba(228, 91, 91, 0.83);
+		background-color: rgba(212, 212, 212, 0.833);
 		
 		box-shadow: inset 0 0 10px #727272;
 	}
